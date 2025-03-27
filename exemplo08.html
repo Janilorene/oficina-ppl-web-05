@@ -14,7 +14,9 @@
             } while(confirm("Deseja informar outro nome?"));
 
             resp.innerHTML = "Nomes informados: <br />"
-            vetor.forEach((nome, i) => {resp.innerHTML += `${i}) ${nome} <br />`});
+            //Erro
+            vetor = vetor.forEach((nome, i) => {return `${i}) ${nome} <br />`});
+            resp.innerHTML += vetor.join(sep = "");
         }
     </script>
 </head>
